@@ -1,0 +1,29 @@
+<body>
+
+<header>
+    <center><img src="img/logo.png"></center>
+</header>
+<center><h2 id="frase">la vida que buscas en un sólo click.</h2></center>
+
+<div class="contenedor-form">
+    <div class="toggle">
+        <span><a href="?page=logIn"> Iniciar sesión</a></span>
+    </div>
+    <div class="formulario">
+      <h2>Crear Cuenta</h2>
+      <form action="php/usuario.php?action=add" autocomplete="off" method="post">
+          <input type="text" placeholder="Usuario" name="username" required>
+          <input type="password" placeholder="Constraseña" name="password" required>
+          <input type="email" placeholder="Correo Electrónico" name="email" required>
+          <input type="text" placeholder="Nombre" name="name" required>
+          <input type="text" placeholder="Apellido Paterno" name="lastname1" required>
+          <input type="text" placeholder="Apellido Materno" name="lastname2" required>
+          <input type="text" placeholder="Estado" name="city" required>
+          <input type="text" placeholder="Pais" name="country" required>
+          <input type="submit" value="Registrarse">
+      </form>
+    </div>
+    <div class="reset-password">
+        <a href="#">Olvide mi Contraseña?</a>
+    </div>
+</div>

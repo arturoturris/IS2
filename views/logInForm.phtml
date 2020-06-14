@@ -1,0 +1,26 @@
+<!-- El cierre de la etiqueta body se encuentra en el archivo footer -->
+<body>
+  <header>
+      <center><img src="img/logo.png"></center>
+  </header>
+
+  <center><h2 id="frase">la vida que buscas en un sólo click.</h2></center>
+
+  <div class="contenedor-form">
+      <div class="toggle">
+          <span><a href="?page=signUp"> Crear Cuenta</a></span>
+      </div>
+
+      <div class="formulario">
+          <h2>Iniciar Sesión</h2>
+          <form action="php/usuario.php?action=authorize" method="post">
+              <input type="text" placeholder="Usuario" name="username" required>
+              <input type="password" placeholder="Contraseña" name="password" required>
+              <input type="submit" value="Iniciar Sesión">
+          </form>
+      </div>
+
+      <div class="reset-password">
+          <a href="#">Olvide mi Contraseña?</a>
+      </div>
+  </div>
