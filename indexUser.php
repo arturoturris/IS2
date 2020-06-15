@@ -11,8 +11,9 @@ switch($paginaSolicitada){
     break;
   }
   case 'nuevoInmueble':{
-    include("views/inmueblesForm.phtml");
-    break;
+    header("Location: views/inmueblesForm.phtml");
+    // include("views/inmueblesForm.phtml");
+    // break;
   }
   default:{
     include("views/home.phtml");

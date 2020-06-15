@@ -14,7 +14,24 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <!-- Nuestro css-->
-  <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{../css/login.css}">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos2.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
 
 </head>
+
+<!-- El cierre del etiqueta body si encuentra en el footer -->
+<body>
+  <header>
+    <section class="wrapper">
+    	<nav>
+        <ul>
+          <li><a href="?page=home">Inicio</a></li>
+  	      <li><a href="?page=nuevoInmueble">Publicar</a></li>
+  	      <li><img src="img/logo.png" alt="logo" width="500" height="90"></li>
+          <li><a href="?page=inmuebles">Buscar</a></li>
+          <li><a href="php/logout.php">Salir</a></li>
+        </ul>
+    	</nav>
+    </section>
+  </header>
