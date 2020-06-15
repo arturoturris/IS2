@@ -1,0 +1,1 @@
+crear bd llamada "renta", dentro restaurar el archivo "renta.sql"
