@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+      body{
+          background: url("../img/fondo2.png");
+      }
+  </style>
+</head>
+
+  <body>
+  <div class="contenedor-form">
+    <div class="toggle">
+      <span><a href="../indexUser.php?page=misPublicaciones">Volver</a></span>
+    </div>
+    <div class="formulario">
+      <h2>Modificar Inmueble</h2>
+      <form action="../php/inmueble.php?action=update" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="id" value="" id="id">
+        <input type="text" placeholder="Numero de habitaciones" name="numRooms" id="numRooms" required>
+        <input type="text" placeholder="Numero de baños" name="numBathrooms" id="numBathrooms" required>
+        <br>
+        <span>Mascotas permitidas:</span>
+        <br>
+        <label for="mascotasSi">Si</label>
+        <input type="radio" id="mascotasSi" name="pets" value="1">
+        <label for="mascotasNo">No</label>
+        <input type="radio" id="mascotasNo" name="pets" value="0">
+        <br>
+        <input type="text" placeholder="Capacidad máxima" name="maxCapacity" id="maxCapacity" required>
+        <input type="text" placeholder="Costo por mes" name="cost" id="cost" required>
+        <input type="text" placeholder="Calle" name="street" id="street" required>
+        <input type="text" placeholder="Número exterior" name="extNumber" id="extNumber" required>
+        <input type="text" placeholder="Colonia" name="neighborhood" id="neighborhood" required>
+        <input type="text" placeholder="Estado" name="city" id="city" required>
+        <input type="file" placeholder="Imagen" name="image" id="image" required>
+        <input type="submit" value="Modificar">
+      </form>
+    </div>
+  </div>
+  <script src="../js/inmueble.js" type="text/javascript"></script>
+  <script>cargarInmuebleAFormulario();</script>
+</body>
+</html>

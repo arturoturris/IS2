@@ -14,24 +14,40 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <!-- Nuestro css-->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos2.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
 
 </head>
 
 <!-- El cierre del etiqueta body si encuentra en el footer -->
 <body>
-  <header>
-    <section class="wrapper">
-    	<nav>
-        <ul>
-          <li><a href="?page=home">Inicio</a></li>
-  	      <li><a href="?page=nuevoInmueble">Publicar</a></li>
-  	      <li><img src="img/logo.png" alt="logo" width="500" height="90"></li>
-          <li><a href="?page=inmuebles">Buscar</a></li>
-          <li><a href="php/logout.php">Salir</a></li>
-        </ul>
-    	</nav>
-    </section>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f4561;">
+      <a class="navbar-brand" href="?page=home">
+          <img src="img/logo.png" width="400" height="65" alt="logo">
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <class class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="?page=home">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="?page=inmuebles">Inmuebles</a>
+              </li>
+          </class>
+          <div class="navbar-nav mr-4">
+              <li class="nav-item">
+                  <a class="btn btn-primary" href="?page=nuevoInmueble"><i class="fas fa-sign-out-alt"></i>   Publicar inmueble</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>   <?php echo $_SESSION['username']; ?></a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="?page=misPublicaciones">Mis publicaciones</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="php/logout.php">Cerrar sesión</a>
+                  </div>
+              </li>
+          </div>
+      </div>
+  </nav>

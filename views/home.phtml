@@ -1,24 +1,28 @@
 <div class="flex-container">
   <div class="row">
-    <div class="col">
-      <div class="slider">
-        <ul>
-          <li><img src="img/casa1.jpg" alt="casa1" width="700" height="500"></li>
-          <li><img src="img/casa2.jpg" alt="casa2" width="700" height="500"></li>
-          <li><img src="img/casa3.jpg" alt="casa3" width="700" height="500"></li>
-        </ul>
+    <div class="col-md-10 col-sm-9 mx-auto text-center">
+      <h1>Recomendados para ti</h1>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/casa1.jpg" class="d-block w-100" alt="..." width="700" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="img/casa2.jpg" class="d-block w-100" alt="..." width="700" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="img/casa3.jpg" class="d-block w-100" alt="..." width="700" height="500">
+        </div>
       </div>
-      <center><h1>Recomendados para ti</h1></center>
-      <section class="contenido wrapper">
-        <h1>Mis Rentas</h1>
-        <br>
-        <p><b><a href="#">Juan José González Nierto</a></b></p>
-        <p>>Av Ejército Nacional 843, Granada, 11520 Ciudad de México, CDMX</p>
-        <br>
-         <p><b><a href="#">Rodrigo Talavera Vazquez</a></b></p>
-        <p>>Carretera San Luis Potosí Querétaro 12401, 76127 Qro.</p>
-        <br>
-      </section>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+      </div>
     </div>
   </div>
 </div>

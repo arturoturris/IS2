@@ -10,6 +10,10 @@ switch($paginaSolicitada){
     include("views/inmuebles.phtml");
     break;
   }
+  case 'misPublicaciones':{
+    include("views/misPublicaciones.phtml");
+    break;
+  }
   case 'nuevoInmueble':{
     header("Location: views/inmueblesForm.phtml");
     // include("views/inmueblesForm.phtml");

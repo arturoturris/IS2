@@ -56,9 +56,49 @@ switch($request){
     break;
   }
 
+  //SOLICITAR UN INMUEBLE
+  case 'get':{
+    $stmt = $db->prepare('SELECT * FROM inmueble WHERE idInmueble=?');
+    $stmt->bind_param('i',$_REQUEST['id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $properties = array();
+
+    while($row = $result->fetch_assoc()){
+      $properties[] = $row;
+    }
+
+    $stmt->close();
+    $db->close();
+
+    echo json_encode($properties);
+    break;
+  }
+
   //SOLICITAR TODOS LOS INMUEBLES
   case 'read':{
     $stmt = $db->prepare('SELECT * FROM inmueble');
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $properties = array();
+
+    while($row = $result->fetch_assoc()){
+      $properties[] = $row;
+    }
+
+    $stmt->close();
+    $db->close();
+
+    echo json_encode($properties);
+    break;
+  }
+
+  //SOLICITAR TODOS LOS INMUEBLES DEL USUARIO CON SESION ABIERTA
+  case 'readMyProperties':{
+    $stmt = $db->prepare('SELECT * FROM inmueble WHERE Propietario=?');
+    $stmt->bind_param('i',$_SESSION['userId']);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -125,7 +165,7 @@ switch($request){
     $stmt->close();
     $db->close();
 
-    header("Location: ../indexUser.php?page=inmuebles");
+    header("Location: ../indexUser.php?page=misPublicaciones");
     break;
   }
 
